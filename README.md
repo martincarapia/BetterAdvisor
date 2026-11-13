@@ -2,6 +2,10 @@
 
 **Work it out yourself before you bother your advisor.**
 
+<p align="center">
+  <img src="docs/demo.gif" width="300" alt="BetterAdvisor checking every PHYS 151 section against a working student's week, then ranking the options by hours away from work (fictional student and school)">
+</p>
+
 Two Claude skills, plus a copy-paste prompt, that do the registration legwork an advisor meeting usually starts with. They find your degree plan and audit, pull every section, check conflicts against your real schedule, rank your options with sources, register you, and put the semester on your calendar.
 
 They're aimed at **working students**, people whose schedule has to fit around a job, fixed meetings and other commitments.
