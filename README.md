@@ -27,6 +27,17 @@ Registering for classes looks simple: pick the courses on your plan, find open s
 
 These skills came out of one real registration that hit every one of these problems. They capture the full method, including the dead ends worth checking quickly, so the next student (or the same student next semester) doesn't have to rediscover it.
 
+## Results
+
+That first registration, anonymized: a student working full time, with a meeting every workday that couldn't move.
+
+- **The planned lab science wasn't offered** in a time that fit. The planner found an alternative sequence the degree audit already accepted.
+- **Every conflict-free combination** of lecture and lab sections was built and ranked by hours away from work. The second half of the sequence was planned for a later term.
+- **An options document** for the advisor meeting, plus an email asking the advisor to update the locked plan, sent once the student approved it.
+- **Registration and the full semester calendar** (class blocks with instructor names, weekly study blocks, spring break cleared) were done in one session.
+
+See [`examples/sample-options.md`](examples/sample-options.md) for what an options write-up looks like, using a made-up school and courses.
+
 ## Quick start: copy-paste prompt
 
 No skills installed? Paste this into Claude (or another AI that can use your browser and calendar) and fill in the brackets:
@@ -35,7 +46,7 @@ No skills installed? Paste this into Claude (or another AI that can use your bro
 You are my academic advisor's prep assistant. Help me register for [TERM, e.g. Spring 2027] at [SCHOOL].
 
 My constraints:
-- Work/fixed commitments: [e.g. job Mon–Fri 8–5, flexible; daily 9:30 AM meeting that cannot move]
+- Work/fixed commitments: [e.g. job Mon–Fri 8–5, flexible; a daily team meeting that cannot move]
 - Preference: [e.g. avoid time off work unless needed to finish the degree]
 - Anything else: [commute, childcare, other jobs, evenings I'm busy]
 
@@ -100,7 +111,7 @@ Then ask something like *"Help me register for next semester's classes"* or *"Pu
 
 ## Contributing
 
-Your school uses a different registration system (Workday Student, PeopleSoft, Colleague)? Found a new gotcha? Pull requests are welcome. Keep skills generic: no personal data, no single-school assumptions, unless they're clearly labeled as examples.
+Your school uses a different registration system (Workday Student, PeopleSoft, Colleague)? Found a new gotcha? Pull requests are welcome. Keep skills generic: no personal data, no single-school assumptions, unless they're clearly labeled as examples. See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## License
 
