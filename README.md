@@ -1,6 +1,12 @@
-# Student Registration Skills for Claude
+# BetterAdvisor
 
-Two Claude skills that help college students register for classes and set up their semester. They're aimed at **working students**, people whose schedule has to fit around a job, fixed meetings and other commitments.
+**Work it out yourself before you bother your advisor.**
+
+Two Claude skills, plus a copy-paste prompt, that do the registration legwork an advisor meeting usually starts with. They find your degree plan and audit, pull every section, check conflicts against your real schedule, rank your options with sources, register you, and put the semester on your calendar.
+
+They're aimed at **working students**, people whose schedule has to fit around a job, fixed meetings and other commitments.
+
+> BetterAdvisor doesn't replace your advisor. It means you show up with the answer already worked out. Your advisor still approves substitutions, updates locked plans, and confirms transfer credit.
 
 | Skill | What it does |
 |---|---|
@@ -20,6 +26,31 @@ Registering for classes looks simple: pick the courses on your plan, find open s
 - **Then the calendar work:** getting every class, lab, study session and break into your calendar with enough detail that a glance tells you where to be and what to do.
 
 These skills came out of one real registration that hit every one of these problems. They capture the full method, including the dead ends worth checking quickly, so the next student (or the same student next semester) doesn't have to rediscover it.
+
+## Quick start: copy-paste prompt
+
+No skills installed? Paste this into Claude (or another AI that can use your browser and calendar) and fill in the brackets:
+
+```text
+You are my academic advisor's prep assistant. Help me register for [TERM, e.g. Spring 2027] at [SCHOOL].
+
+My constraints:
+- Work/fixed commitments: [e.g. job Mon–Fri 8–5, flexible; daily 9:30 AM meeting that cannot move]
+- Preference: [e.g. avoid time off work unless needed to finish the degree]
+- Anything else: [commute, childcare, other jobs, evenings I'm busy]
+
+Do this, step by step, and show your sources (registration system, degree audit, school web pages):
+1. Open my student portal and find my degree plan and degree audit (I'll sign in myself; never enter my password). Tell me which courses the plan lists for this term and which requirements are still incomplete, including any alternatives the audit accepts.
+2. Pull every section of those courses for this term (days, times, rooms, seats, instructor, prerequisites, linked labs). If a planned course isn't offered, check the audit's alternatives and the next terms.
+3. Check my calendar for recurring commitments and confirm with me which are fixed.
+4. Build every schedule combination with no conflicts, checking lecture vs lab for every pair of courses. Rank them by hours away from work, then by how fragmented my days get. Flag anything that blocks future semesters, such as required courses that only meet during work hours.
+5. Give me a clear recommendation and a short table of options, plus what doesn't work and why.
+6. If I ask: write it up as a document for my advisor meeting, with questions to ask.
+7. Only when I say so: register me (I approve Submit), then draft an email to my advisor and send it only after I approve.
+8. Then put the semester on my calendar: class blocks titled with course, topic and the instructor's full name; weekly study blocks; official breaks from the academic calendar; and remove class and study sessions during break weeks.
+
+Rules: the degree audit decides what counts, not the course number in my plan. Never assume transfer credit or substitutions; mark them "confirm with advisor". Ask me before any irreversible action.
+```
 
 ## What the skills do
 
@@ -61,8 +92,8 @@ These skills came out of one real registration that hit every one of these probl
 **Claude Code:** copy the folders into your skills directory:
 
 ```bash
-git clone https://github.com/<you>/student-registration-skills.git
-cp -r student-registration-skills/skills/* ~/.claude/skills/
+git clone https://github.com/martincarapia/BetterAdvisor.git
+cp -r BetterAdvisor/skills/* ~/.claude/skills/
 ```
 
 Then ask something like *"Help me register for next semester's classes"* or *"Put my spring classes on my calendar."*
