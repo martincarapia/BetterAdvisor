@@ -21,7 +21,7 @@ Get official term dates from the school's academic calendar (search the school's
 ## 2. Class blocks
 
 One recurring event per meeting pattern (lecture, lab, recitation):
-- **Title, readable at a glance:** `COURSE NUM Type: short topic · Prof. Full Name`, e.g. `CS 1610 Lecture: Programming II (OOP & GUIs) · Prof. Jane Doe`.
+- **Title, readable at a glance:** `COURSE NUM Type: short topic · Prof. Full Name`, e.g. `BIO 110 Lecture: Cells & Genetics · Prof. Jane Doe`.
 - **Description:** course and section, CRN, credits; instructor and email; room, days and times, term dates; "What it is" (one to two lines); what to bring or fees; what it pairs with (lab ↔ lecture). If the student works, add a note like when to leave work.
 - **Location:** building and room plus campus name.
 - **Recurrence:** start on the **first actual meeting date** (the first matching weekday on or after the term start), `RRULE:FREQ=WEEKLY;BYDAY=TU,TH;UNTIL=<last day>T235959Z`.

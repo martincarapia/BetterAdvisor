@@ -36,14 +36,15 @@ Banner 9 Self-Service exposes JSON endpoints under `/StudentRegistrationSsb/ssb/
 
 ```js
 const base='/StudentRegistrationSsb/ssb'; const sid='s'+Date.now();
-// 1) list terms
+// 1) list terms; each has a code (format varies by school) and a description
 await fetch(base+'/classSearch/getTerms?searchTerm=&offset=1&max=10').then(r=>r.json());
+const term='<code from step 1>';
 // 2) pick a term for searching
-await fetch(base+'/term/search?mode=search',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:'term=202720&uniqueSessionId='+sid});
+await fetch(base+'/term/search?mode=search',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:'term='+term+'&uniqueSessionId='+sid});
 // 3) before EACH new search, reset the form or results go stale
 await fetch(base+'/classSearch/resetDataForm',{method:'POST'});
 // 4) search: by subject+number, by subject only, or by attribute (txt_attribute=XXXX)
-const r=await fetch(`${base}/searchResults/searchResults?txt_subject=CS&txt_courseNumber=16100&txt_term=202720&uniqueSessionId=${sid}&pageOffset=0&pageMaxSize=100`).then(r=>r.json());
+const r=await fetch(`${base}/searchResults/searchResults?txt_subject=MATH&txt_courseNumber=101&txt_term=${term}&uniqueSessionId=${sid}&pageOffset=0&pageMaxSize=100`).then(r=>r.json());
 // r.data[]: courseReferenceNumber, sequenceNumber, scheduleTypeDescription (Lecture/Lab/Distance),
 // linkIdentifier, seatsAvailable, maximumEnrollment, instructionalMethod (e.g. ONLNE), faculty[],
 // meetingsFaculty[].meetingTime {monday..sunday, beginTime, endTime, building, room, startDate, endDate}
